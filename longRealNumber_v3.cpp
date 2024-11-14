@@ -8,7 +8,7 @@ int main() {
     std::getline(std::cin, input); // Считываем строку
 
     // Регулярное выражение для проверки корректности вещественного числа
-    std::regex float_regex(R"(^[-]?(\d*\.?\d+|\.\d+)$)");
+    std::regex float_regex(R"(^[-]?(\d*\.\d+|\d+\.\d*|\d+|\.\d+)$)");
 
     // Проверяем соответствие строки регулярному выражению
     if (std::regex_match(input, float_regex)) {
